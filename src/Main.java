@@ -603,6 +603,9 @@ public class Main {
                 if (el > maxRange) {
                     el = maxRange;
                     ourArray[i].setText(Integer.toString(maxRange));
+                } else if (el<minRange){
+                    el = minRange;
+                    ourArray[i].setText(Integer.toString(minRange));
                 }
                 sortedArray[i] = el;
             }
@@ -646,7 +649,8 @@ public class Main {
             if (numb>maxElem) {
                 numb = maxElem;
                 numbOfElement.setText(Integer.toString(maxElem));
-            }
+            } else if (numb<0){ numbOfElement.setText(Integer.toString(0));
+            numb = 0;}
             numberOfSortedEl = numb;
             Integer sch = 0;
             for (Integer i = 0;i<numb;++i){
