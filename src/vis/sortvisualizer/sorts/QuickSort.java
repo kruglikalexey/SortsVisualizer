@@ -1,4 +1,4 @@
-import com.sun.xml.internal.bind.v2.model.annotation.Quick;
+package vis.sortvisualizer.sorts;
 
 import java.util.Vector;
 
@@ -8,13 +8,15 @@ import java.util.Vector;
 public class QuickSort implements Sortable {
     protected int numb;
     protected int[] array;
+    private int nowStep;
 
-    QuickSort(int n,int[] arr){
+    public QuickSort(int n, int[] arr){
         numb = n;
         array = arr;
+        nowStep = 0;
     }
 
-    public void QuickSort(int left, int right,Vector<Integer> result,int step,int nowStep){
+    public void QuickSort(int left, int right,Vector<Integer> result,int step){
 
         if (nowStep==step) return;
 
@@ -40,8 +42,8 @@ public class QuickSort implements Sortable {
 
         }
 
-        if (i<right) QuickSort(i,right,result,step,nowStep);
-        if (left<j) QuickSort(left,j,result,step,nowStep);
+        if (i<right) QuickSort(i,right,result,step);
+        if (left<j) QuickSort(left,j,result,step);
         return;
 
     }
@@ -50,7 +52,7 @@ public class QuickSort implements Sortable {
     public Vector<Integer> sort(int step) {
         Vector<Integer> result = new Vector<Integer>();
         if (step!=0){
-        QuickSort(0,numb-1,result,step,0);}
+        QuickSort(0,numb-1,result,step);}
         return result;
     }
 

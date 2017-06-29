@@ -1,3 +1,5 @@
+package vis.sortvisualizer.sorts;
+
 import java.util.Vector;
 
 /**
@@ -7,7 +9,7 @@ public class ShellSort implements Sortable {
     protected int numb;
     protected int[] array;
 
-    ShellSort(int n,int[] arr){
+    public ShellSort(int n, int[] arr){
         numb = n;
         array = arr;
     }

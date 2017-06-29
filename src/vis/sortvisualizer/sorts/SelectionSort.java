@@ -1,3 +1,5 @@
+package vis.sortvisualizer.sorts;
+
 import java.util.Vector;
 
 /**
@@ -7,7 +9,7 @@ public class SelectionSort implements Sortable {
     protected int numb;
     protected int[] array;
 
-    SelectionSort(int n,int[] arr){
+    public SelectionSort(int n, int[] arr){
         numb = n;
         array = arr;
     }

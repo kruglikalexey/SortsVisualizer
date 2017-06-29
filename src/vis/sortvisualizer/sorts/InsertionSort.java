@@ -1,3 +1,5 @@
+package vis.sortvisualizer.sorts;
+
 import java.util.Vector;
 
 /**
@@ -7,7 +9,7 @@ public class InsertionSort implements Sortable {
     protected int numb;
     protected int[] array;
 
-    InsertionSort(int n,int[] arr){
+    public InsertionSort(int n, int[] arr){
         numb = n;
         array = arr;
     }
@@ -29,11 +31,11 @@ public class InsertionSort implements Sortable {
     int j;
     for (int i = 1;i<numb;++i){
          j = i;
-        while (j>0&&array[j-1]>array[j]){
+        while (j > 0 && array[j-1] > array[j]){
 
             result.add(j-1);
             result.add(j);
-            swap(array,j-1,j);
+            swap(array,j - 1,j);
             ++nowStep;
             if (nowStep==step) return result;
             --j;

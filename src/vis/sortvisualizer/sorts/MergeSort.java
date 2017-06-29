@@ -1,3 +1,5 @@
+package vis.sortvisualizer.sorts;
+
 import java.util.Vector;
 
 /**
@@ -8,7 +10,7 @@ public class MergeSort implements Sortable {
     protected int[] array;
     protected int[] buffer;
 
-    MergeSort(int n,int[] arr){
+    public MergeSort(int n, int[] arr){
         numb = n;
         array = arr;
         buffer = new int[n];

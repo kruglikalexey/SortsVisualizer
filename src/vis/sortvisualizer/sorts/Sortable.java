@@ -1,3 +1,5 @@
+package vis.sortvisualizer.sorts;
+
 import java.util.Vector;
 
 /**

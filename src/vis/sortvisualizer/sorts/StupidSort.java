@@ -1,15 +1,15 @@
-import org.apache.tools.ant.types.resources.Sort;
+package vis.sortvisualizer.sorts;
 
 import java.util.Vector;
 
 /**
  * Created by root on 22.06.17.
  */
-public class StupidSort implements Sortable{
+public class StupidSort implements Sortable {
     protected int numb;
     protected int[] array;
 
-    StupidSort(int numberOfEl,int[] arr){
+    public StupidSort(int numberOfEl, int[] arr){
         numb = numberOfEl;
         array = arr;
     }
